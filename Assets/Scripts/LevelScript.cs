@@ -23,10 +23,10 @@ public class LevelScript : MonoBehaviour
 
     void Update()
     {
-        kalansayı = 9 - move.adım;
+        kalansayı = 11 - move.adım;
         kalantext.text = kalansayı.ToString();
 
-        if (move.adım > 8)
+        if (move.adım > 10)
         {
             Invoke("isfinished", 0.1f);
         }
@@ -35,7 +35,7 @@ public class LevelScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.tag ==  "finish" && move.adım < 10)
+        if (collision.gameObject.tag ==  "finish" && move.adım < 12)
         {
             kazandınbool = true;
             move.enabled = false;
